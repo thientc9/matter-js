@@ -43,7 +43,7 @@
     "dev": "npm run serve -- --open",
     "serve": "webpack-dev-server --no-cache --mode development --config webpack.demo.config.js",
     "watch": "nodemon --watch webpack.demo.config.js --exec \"npm run serve\"",
-    "build": "webpack --mode=production --no-hot --no-watch & webpack --mode=production --no-hot --no-watch --env.MINIMIZE",
+    "build": "webpack --mode=production --no-hot --no-watch & webpack --mode=production --no-hot --no-watch --env.MINIMIZE --openssl-legacy-provider",
     "build-alpha": "webpack --mode=production --no-hot --no-watch --env.KIND=alpha & webpack --mode=production --no-hot --no-watch --env.MINIMIZE --env.KIND=alpha",
     "build-dev": "webpack --mode=production --no-hot --no-watch --env.KIND=dev & webpack --mode=production --no-hot --no-watch --env.MINIMIZE --env.KIND=dev",
     "build-demo": "rm -rf ./demo/js && webpack --no-hot --no-watch --config webpack.demo.config.js --mode=production && webpack --no-hot --no-watch --config webpack.demo.config.js --mode=production --env.MINIMIZE",
